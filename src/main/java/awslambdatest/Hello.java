@@ -86,8 +86,8 @@ public class Hello implements RequestStreamHandler {
 	public void writeDateToS3(String result)
 
 	{
-		String dstBucket="";
-		String dstKey="nitun-test/"+java.util.UUID.randomUUID() + ".txt" ;
+		String dstBucket="nituntest";
+		String dstKey="preprocess/"+java.util.UUID.randomUUID() + ".txt" ;
 		InputStream targetStream = new ByteArrayInputStream(result.getBytes());
 		AmazonS3 s3Client = AmazonS3ClientBuilder.defaultClient();
 
